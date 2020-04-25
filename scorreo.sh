@@ -33,7 +33,7 @@ enviarcorreo(){
     read $seguro 
     case $seguro in
     s)
-    curl --data "remitente=$receptor && asunto=$asunto && msj=$mensaje && desde=remitente" https://insessorial-halls.000webhostapp.com/send.php
+    curl --data "remitente=$receptor && asunto=$asunto && msj=$mensaje && desde=$remitente" https://insessorial-halls.000webhostapp.com/send.php
     ;;
     n)
         clear
@@ -44,7 +44,7 @@ enviarcorreo(){
 menuInicial(){
     clear
 
-    echo -e '\e[92Bienvenido '
+    echo -e '\e[92mBienvenido '
     echo ''
     echo 'presione s Iniciar suplantación'
     read opcion
