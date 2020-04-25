@@ -30,7 +30,8 @@ enviarcorreo(){
     echo 'Asunto del correo' $asunto
     echo 'Mensaje' $mensaje
     echo '¿Seguro de mandar el siguiente mensaje? (s/n)'
-    read $seguro in
+    read $seguro 
+    case $seguro in
     s)
     curl --data "remitente=$receptor && asunto=$asunto && msj=$mensaje && desde=remitente" https://insessorial-halls.000webhostapp.com/send.php
     ;;
